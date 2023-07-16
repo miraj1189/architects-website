@@ -1,6 +1,6 @@
 /* work sans font */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Work+Sans:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Work+Sans:wght@400;500;600;700;800&display=swap');
 
 * {
     font-family: 'Open Sans', sans-serif;
@@ -86,22 +86,82 @@ nav li a {
 .banner-img {
     width: 100%;
 }
+
+/* main style */
+main {
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
+/* features section style */
+
+.team-container {
+    display: flex;
+    align-items: center;
+    margin-top: 85px;
+}
+
+.team-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.team-content {
+    padding-left: 75px;
+    padding-right: 75px;
+    max-width: 540px;
+}
+
+.team-title {
+    font-size: 45px;
+}
+
+.span-1 {
+    color: #727272;
+    font-weight: 500;
+}
+
+.span-2 {
+    color: #131313;
+    font-weight: 700;
+}
+
+.span-3 {
+    color: #FF900E;
+    font-weight: 700;
+}
+
+.team-description {
+    color: #727272;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
 /* responsive media style */
 /* mobile devices */
-@media screen and (max-width:576px) {   
-    header{
+@media screen and (max-width:576px) {
+    header, .team-content {
         padding: 10px;
     }
-    nav{
+
+    nav,
+    .team-container {
         flex-direction: column;
     }
+    .team-img-container{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
+
 /* tablet devices */
 @media screen and (min-width:576px) and (max-width:992px) {
-    header{
+    header {
         padding: 10px 50px;
     }
-    nav{
+
+    nav,.team-container {
         flex-direction: column;
     }
 }
